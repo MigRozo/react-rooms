@@ -1,0 +1,65 @@
+.rooms{
+    display: block;
+}
+.roomsNav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 90rem;
+    max-width: 100%;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+.roomsNav_item{
+    background: none;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 1rem;
+    padding: 0;
+    border: 0;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.roomsList{
+    display: block;
+}
+.roomsNav + .roomsList .room:first-child{
+    margin-top: 0;
+}
+
+.room{
+    margin: 5rem 0;
+}
+.room_row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -1rem;
+}
+.room:nth-child(even) .room_row{
+    flex-direction: row-reverse;
+}
+.room_pic{
+    flex: 1 1 40rem;
+    display: block;
+    padding: 0 1rem;
+}
+.room_pic img{
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+.room_copy{
+    flex: 1 1 30rem;
+    display: block;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+.room_cta{
+    display: block;
+    margin-top: 3rem;
+}

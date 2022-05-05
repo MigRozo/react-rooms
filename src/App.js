@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 function RoomsNav(props) {
   const { children } = props;
@@ -20,7 +21,7 @@ function RoomsList(props) {
   const { children } = props;
 
   return (
-    <div className="rooms">{children}</div>
+    <div className="roomsList">{children}</div>
   );
 }
 
@@ -50,11 +51,11 @@ function Room(props) {
               )}
 
               {(!link && available) && (
-                <p>Cooming soon</p>
+                <span className="tag">Cooming soon</span>
               )}
 
               {!available && (
-                <p>No Vacancy</p>
+                <span className="tag">No Vacancy</span>
               )}
             </div>
           </div>
