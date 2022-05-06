@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 function RoomsNav(props) {
@@ -10,10 +10,10 @@ function RoomsNav(props) {
 }
 
 function RoomsNavItem(props) {
-  const { value, label } = props;
+  const { value, label, setCurrentCategory } = props;
 
   return (
-    <button className="roomsNav_item">{ label ? label : value }</button>
+    <button className="roomsNav_item" onClick={ () => setCurrentCategory(value) }>{ label ? label : value }</button>
   );
 }
 
@@ -66,6 +66,7 @@ function Room(props) {
 }
 
 function App() {
+  const [currentCategory, setCurrentCategory] = React.useState('all');
   const [state] = React.useState({
     categories: [
       { value: 'suite', label: '' },
@@ -89,7 +90,7 @@ function App() {
         available: false
       },
       {
-        category: '',
+        category: 'villa',
         id: 12869,
         name: 'Deluxe Jack',
         description: 'Minus, illo! Voluptates mollitia quia reprehenderit quam officiis perferendis corrupti fugit dicta. Rem quae earum rerum cum ex amet perferendis, harum itaque.',
@@ -102,16 +103,14 @@ function App() {
   return (
     <div className="rooms">
       <RoomsNav>
-        <RoomsNavItem value="all" label="All Rooms" />
-        {
-          state.categories.map((category, i) => (<RoomsNavItem key={i} {...category} />))
-        }
+        <RoomsNavItem value="all" label="All Rooms" setCurrentCategory={setCurrentCategory} />
+        { state.categories.map((category, i) => (<RoomsNavItem key={i} setCurrentCategory={setCurrentCategory} {...category} />)) }
       </RoomsNav>
 
       <RoomsList>
-        {
-          state.rooms.map(room => (<Room key={room.id} {...room} />))
-        }
+        { state.rooms.map(room => {
+          if ( currentCategory === 'all' || currentCategory === room.category ) return (<Room key={room.id} {...room} />)
+        }) }
       </RoomsList>
     </div>
   );
