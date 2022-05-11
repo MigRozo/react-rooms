@@ -23,6 +23,10 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+.roomsNav_item:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 .roomsList{
     display: block;
 }
@@ -32,6 +36,7 @@
 
 .room{
     margin: 5rem 0;
+    animation: fadeIn 1s forwards;
 }
 .room_row{
     display: flex;
@@ -62,4 +67,12 @@
 .room_cta{
     display: block;
     margin-top: 3rem;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
