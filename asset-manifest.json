@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-rooms/static/css/main.18b17a3d.css",
+    "main.js": "/react-rooms/static/js/main.05e823d7.js",
+    "index.html": "/react-rooms/index.html",
+    "main.18b17a3d.css.map": "/react-rooms/static/css/main.18b17a3d.css.map",
+    "main.05e823d7.js.map": "/react-rooms/static/js/main.05e823d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18b17a3d.css",
+    "static/js/main.05e823d7.js"
+  ]
+}

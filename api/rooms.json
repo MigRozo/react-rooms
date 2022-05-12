@@ -1,0 +1,38 @@
+{
+    "categories": [
+        {
+            "value": "suite",
+            "label": ""
+        },
+        {
+            "value": "villa",
+            "label": ""
+        }
+    ],
+    "rooms": [
+        {
+            "category": "",
+            "id": 12871,
+            "name": "Double King",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quas fugit vero nemo possimus esse distinctio. Sunt placeat dicta ab.",
+            "link": "#",
+            "available": true
+        },
+        {
+            "category": "suite",
+            "id": 12870,
+            "name": "Double Queen",
+            "description": "Qui quisquam deserunt hic. Suscipit dolorum quibusdam saepe aliquam iusto eaque atque assumenda perspiciatis ab, eveniet adipisci?",
+            "link": "#",
+            "available": false
+        },
+        {
+            "category": "villa",
+            "id": 12869,
+            "name": "Deluxe Jack",
+            "description": "Minus, illo! Voluptates mollitia quia reprehenderit quam officiis perferendis corrupti fugit dicta. Rem quae earum rerum cum ex amet perferendis, harum itaque.",
+            "link": "",
+            "available": true
+        }
+    ]
+}
