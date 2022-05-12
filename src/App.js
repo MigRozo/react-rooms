@@ -16,7 +16,7 @@ function App() {
   );
 
   React.useEffect(() => {
-    fetch(`/api/rooms.json`)
+    fetch(`https://migrozo.github.io/react-rooms/api/rooms.json`)
       .then( resp => resp.json() )
       .then( data => setState(data) );
   }, []);
